@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0"
+    ExtensionBundleId="com.eventdesigntoolkit.illustrator"
+    ExtensionBundleVersion="0.7.0"
+    ExtensionBundleName="EVENT DESIGN TOOLKIT">
+  <ExtensionList>
+    <Extension Id="com.eventdesigntoolkit.illustrator" Version="0.7.0"/>
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList><Host Name="ILST" Version="22.0"/></HostList>
+    <LocaleList><Locale Code="All"/></LocaleList>
+    <RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="8.0"/></RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.eventdesigntoolkit.illustrator">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./index.html</MainPath>
+          <ScriptPath>./host/toolkit.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--disable-gpu</Parameter>
+            <Parameter>--disable-gpu-compositing</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle><AutoVisible>false</AutoVisible></Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>EVENT DESIGN TOOLKIT</Menu>
+          <Geometry>
+            <Size><Height>660</Height><Width>390</Width></Size>
+            <MinSize><Height>320</Height><Width>340</Width></MinSize>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>

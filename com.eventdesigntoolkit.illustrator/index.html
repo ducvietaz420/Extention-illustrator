@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EVENT DESIGN TOOLKIT</title>
+  <link rel="stylesheet" href="panel.css">
+  <script src="js/CSInterface.js" defer></script>
+  <script src="js/panel.js" defer></script>
+  <script src="js/tools.js" defer></script>
+  <script src="js/fill.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand-line">
+      <div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="brand">
+        <h1>EVENT DESIGN TOOLKIT</h1>
+        <p id="document-line" role="status">Đang kiểm tra key…</p>
+      </div>
+      <button type="button" id="license-manage" title="Xem thời hạn hoặc đổi key" hidden>Key</button>
+      <button type="button" id="refresh" class="icon-button" title="Làm mới tài liệu và danh sách artboard" aria-label="Làm mới tài liệu" hidden>↻</button>
+    </div>
+  </header>
+  <nav class="navigation" id="navigation" aria-label="Khu vực công cụ" hidden></nav>
+  <main id="workspace" hidden></main>
+  <main id="license-view" hidden>
+    <section class="license-card" aria-labelledby="license-heading">
+      <h2 id="license-heading">Kích hoạt Toolkit</h2>
+      <p id="license-description"></p>
+      <form id="license-form">
+        <div class="field">
+          <label for="license-key">Key sử dụng</label>
+          <textarea id="license-key" rows="4" spellcheck="false" autocapitalize="off" autocomplete="off"
+            placeholder="Dán key bắt đầu bằng EDT1." aria-describedby="license-help"></textarea>
+          <p class="hint" id="license-help">Dán key do người quản trị cấp. Có thể kích hoạt offline.</p>
+        </div>
+        <p id="license-message" class="notification" role="status" aria-live="polite" hidden></p>
+        <div class="actions">
+          <button id="license-recheck" type="button">Kiểm tra lại</button>
+          <button id="license-back" type="button" hidden>Quay lại</button>
+          <button id="license-remove" type="button" hidden>Gỡ key</button>
+          <button id="license-submit" type="submit" class="primary">Kích hoạt</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="statusbar" role="status" aria-live="polite"><span id="status-dot" class="status-dot"></span><span id="status">Đang kết nối Illustrator…</span></footer>
+</body>
+</html>
